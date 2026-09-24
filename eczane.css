@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.main{
+    background: linear-gradient(135deg, #3E7C7F, #1B3A3D);    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1B3A3D;
+}
+
+.main h1{
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.subtitle{
+    color: #EAF6F6;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.navbar{
+    background-color:#EAF6F6;
+    display: flex;
+}
+
+.navbar img{
+    max-height: 60px; 
+    object-fit: cover;
+    display: flex;
+    order: -1;
+
+}
+
+.navbar img:hover{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.navbar a{
+    color: #1B3A3D;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover{
+background-color:#1B3A3D;
+color: #EAF6F6;
+}
+
+.content input{
+    width: 300px;
+    height: 40px;
+    padding: 0 15px;
+    background-color: #ffffff;
+    border: 2px solid #5F9EA0;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 44px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    
+
+}
+.content  {
+    background-color: #F8F9FA;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    padding: 60px 20px;
+    
+}
+
+
+
+.content input:focus{
+    outline: none;
+    border-color: #2E8B8B;
+    box-shadow: 0 0 0 3px rgba(46,139,139,0.15);
+}
+
+.search-btn{
+    background-color: #2E8B8B;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+}
+.search-btn:active{
+    transform: scale(0.97);
+}
+
+.search-btn:hover{
+    background-color: #1B3A3D;
+}
+
+.result{
+    width:100%;
+    max-width:600px;
+    margin :30px auto 0;
+    background-color: #EAF6F6;
+    border: 1px solid #B2DFDB;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12 px rgba(0,0,0,0.08);
+    color: #1B3A3D;
+    text-align: right;
+    display: none;
+}
+
+.result h3{
+    color:#2E8B8B;
+    margin-bottom: 10px;
+
+}
+
+.result p{
+    margin:8px 0;
+    line-height: 1.6;
+}
+
+@media screen and (max-width:700px) {
+    .container, .navbar{
+        flex-direction: column;
+    }
+}
