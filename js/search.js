@@ -3,7 +3,7 @@
 let medications = [];
 
 // نجيب بيانات الأدوية من ملف medications.json عند تحميل الصفحة
-fetch('medications.json')
+fetch('data/medications.json')
     .then(response => response.json())
     .then(data => {
         medications = data;
