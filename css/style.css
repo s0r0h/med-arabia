@@ -144,3 +144,32 @@ line-height: 1.6;
         flex-direction: column;
     }
 }
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.suggestion-btn {
+    background-color: #ffffff;
+    color: #1B3A3D;
+    border: 2px solid #2E8B8B;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.suggestion-btn:hover {
+    background-color: #2E8B8B;
+    color: #ffffff;
+}
+
+.suggestion-btn:active {
+    transform: scale(0.97);
+}
