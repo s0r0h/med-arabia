@@ -90,13 +90,19 @@ function levenshtein(a, b) {
 // دالة عرض بطاقة الدواء
 function showCard(med) {
     const resultBox = document.querySelector('.result');
+    const interactionsHtml = med.interactions && med.interactions.trim() !== ''
+        ? `<p><strong>التفاعلات الدوائية:</strong> ${med.interactions}</p>`
+        : '';
+
     resultBox.innerHTML = `
         <h3>${med.name_ar}</h3>
         <p><strong>التصنيف:</strong> ${med.category}</p>
         <p><strong>الاستخدام:</strong> ${med.usage}</p>
         <p><strong>الجرعة:</strong> ${med.dosage}</p>
+        <p class="dosage-note" style="font-size: 13px; color: rgba(27, 58, 61, 0.75); margin-top: -4px; margin-bottom: 8px;">جرعات عامة للبالغين وتختلف حسب الحالة. استشر الصيدلاني أو الطبيب.</p>
         <p><strong>الآثار الجانبية:</strong> ${med.side_effects}</p>
         <p><strong>تحذيرات:</strong> ${med.warnings}</p>
+        ${interactionsHtml}
     `;
     resultBox.style.display = 'block';
 }

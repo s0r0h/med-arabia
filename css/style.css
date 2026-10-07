@@ -173,3 +173,10 @@ line-height: 1.6;
 .suggestion-btn:active {
     transform: scale(0.97);
 }
+
+.dosage-note {
+    font-size: 13px;
+    color: rgba(27, 58, 61, 0.75);
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
