@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن مد ارابيا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar"> 
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="about.html">عن المشروع</a>
+        <img src="assets/logo.jpg" alt="medicine logo icon">
+    </div>
+    
+    <header>
+        <div class="main">
+        <h1> مد ارابيا - دليلك للادوية </h1><br>
+        <p class="subtitle">معلومات عامة عن الأدوية بضغطة وحدة</p>
+        </div>
+    </header>
+     
+    <div class="content">
+        <div class="about-card">
+            <h2>عن مد ارابيا</h2>
+            <p>مد ارابيا موقع يساعدك على البحث عن معلومات عامة عن الأدوية بالعربي.</p>
+            <p>مصدر المعلومات: نشرات هيئة الغذاء والدواء الأمريكية (OpenFDA)، مترجمة ومنظمة بمساعدة الذكاء الاصطناعي، ولم تتم مراجعتها طبياً بعد.</p>
+            <p>المعلومات للتوعية فقط، ولا تغني عن الطبيب أو الصيدلاني، ولا تُستخدم للتشخيص أو لوصف دواء.</p>
+            <p>الجرعات المذكورة عامة للبالغين وتختلف حسب الحالة.</p>
+            <p>لا تكتب معلومات شخصية في صندوق البحث.</p>
+            <p id="request-line">لم تجد دواءك؟ <a id="request-link" href="" target="_blank" rel="noopener" style="display: none;">اطلب إضافته</a><span id="request-text">اطلب إضافته</span> وسنعمل على إضافته.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>المعلومات الموجودة بهذا الموقع لأغراض تعليمية وتوعوية فقط، ولا تُغني عن استشارة الطبيب أو الصيدلي المختص. لا تُستخدم كبديل عن التشخيص أو العلاج الطبي.</p>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        if (typeof REQUEST_URL !== 'undefined' && REQUEST_URL && REQUEST_URL.trim() !== '') {
+            const link = document.getElementById('request-link');
+            const text = document.getElementById('request-text');
+            if (link && text) {
+                link.href = REQUEST_URL;
+                link.style.display = 'inline';
+                text.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

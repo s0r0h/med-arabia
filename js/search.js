@@ -1,3 +1,5 @@
+const REQUEST_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeY5ZheXP-chf-TTXMdvdY2s93vecj6961iY1ZUBReMZrNskw/viewform?usp=publish-editor';
+
 // هذا الملف يتكفل بالبحث الذكي عن الدواء وعرض معلوماته داخل بطاقة النتيجة
 
 let medications = null;
@@ -126,6 +128,17 @@ function showSuggestions(suggestions) {
     });
 }
 
+// دالة عرض رسالة عدم العثور على الدواء
+function showNoMatch() {
+    const resultBox = document.querySelector('.result');
+    let html = `<p>ما لقينا معلومات عن هذا الدواء. تأكد من كتابة الاسم، أو جرّب الاسم العلمي.</p>`;
+    if (typeof REQUEST_URL === 'string' && REQUEST_URL.trim() !== '') {
+        html += `<a href="${REQUEST_URL}" target="_blank" rel="noopener" class="request-btn">اطلب إضافة هذا الدواء</a>`;
+    }
+    resultBox.innerHTML = html;
+    resultBox.style.display = 'block';
+}
+
 // دالة البحث الرئيسية
 function searchMedicine() {
     const input = document.querySelector('.content input');
@@ -155,8 +168,7 @@ function searchMedicine() {
         if (exactFullMatch) {
             showCard(exactFullMatch);
         } else {
-            resultBox.innerHTML = `<p>ما لقينا معلومات عن هذا الدواء. تأكد من كتابة الاسم، أو جرّب الاسم العلمي.</p>`;
-            resultBox.style.display = 'block';
+            showNoMatch();
         }
         return;
     }
@@ -304,8 +316,7 @@ function searchMedicine() {
     }
 
     // 4. لا يوجد تطابق
-    resultBox.innerHTML = `<p>ما لقينا معلومات عن هذا الدواء. تأكد من كتابة الاسم، أو جرّب الاسم العلمي.</p>`;
-    resultBox.style.display = 'block';
+    showNoMatch();
 }
 
 // ربط الأحداث عند تحميل DOM

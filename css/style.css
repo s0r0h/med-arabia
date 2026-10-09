@@ -180,3 +180,63 @@ line-height: 1.6;
     margin-top: -4px;
     margin-bottom: 8px;
 }
+
+.request-btn {
+    display: inline-block;
+    background-color: #2E8B8B;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 15px;
+}
+
+.request-btn:hover {
+    background-color: #1B3A3D;
+    color: #ffffff;
+}
+
+.request-btn:active {
+    transform: scale(0.97);
+}
+
+.about-card {
+    width: 100%;
+    max-width: 650px;
+    background-color: #EAF6F6;
+    border: 1px solid #B2DFDB;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    color: #1B3A3D;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.about-card h2 {
+    color: #2E8B8B;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.about-card p {
+    margin: 14px 0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-card a {
+    color: #2E8B8B;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.about-card a:hover {
+    color: #1B3A3D;
+}
